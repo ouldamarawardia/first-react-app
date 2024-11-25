@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {FaInstagram ,FaLinkedin,FaFacebook } from "react-icons/fa6";
 function Footer() {
   return (
     <footer className="footer-section">
@@ -7,18 +7,18 @@ function Footer() {
                 <p className="copyright-text">@ 2024 Pinku coding</p>
                 <div className="social-link-list">
                     <a href="www.facebook.com" className="social-link">
-                        <i className="fa-brands fa-facebook"></i>
+                        <i><FaFacebook /></i>
                     </a>
                     <a href="www.instagram.com" className="social-link">
-                        <i className="fa-brands fa-instagram"></i>
+                        <i><FaInstagram /></i>
                     </a>
                     <a href="www.linkedin.com" className="social-link">
-                        <i className="fa-brands fa-linkedin"></i>
+                        <i><FaLinkedin /></i>
                     </a>  
                 </div>
 
                 <p className="policy-text">
-                    <a href="#" className="policy-link" >Privacy policy</a>
+                    <a href="/" className="policy-link" >Privacy policy</a>
                     <span className="separator">Refund policy</span>
                 </p>
             </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import about from '../../assets/images/aboutUs.png';
+import {FaInstagram ,FaLinkedin,FaFacebook } from "react-icons/fa6";
 export default function AboutBody() {
   return (
     <>
@@ -15,13 +16,13 @@ export default function AboutBody() {
                         quibusdam fuga optio impedit.</p>
                     <div className="social-link-list">
                         <a href="www.facebook.com" className="social-link">
-                            <i className="fa-brands fa-facebook"></i>
+                            <i><FaFacebook/></i>
                         </a>
                         <a href="www.intagram.com" className="social-link">
-                            <i className="fa-brands fa-instagram"></i>
+                            <i><FaInstagram/></i>
                         </a>
                         <a href="www.linkedin.com" className="social-link">
-                            <i className="fa-brands fa-linkedin"></i>
+                            <i><FaLinkedin/></i>
                         </a>
                     </div>
                 </div>

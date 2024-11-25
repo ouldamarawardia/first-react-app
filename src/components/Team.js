@@ -5,7 +5,6 @@ function Team() {
   return (
     <>
     <TeamBody/>
-    <Contact/>
     </>
   )
 }

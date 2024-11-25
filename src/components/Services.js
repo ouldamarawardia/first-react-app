@@ -5,7 +5,6 @@ function Services() {
   return (
     <>
     <ServicesBody/>
-    <Team/>
     </>
   )
 }

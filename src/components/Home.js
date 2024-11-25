@@ -1,6 +1,7 @@
 
 import React from 'react'
 import mainImage from '../assets/images/main.png';
+
 function Home() {
   return (
     <section className="hero-section">

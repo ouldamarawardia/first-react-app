@@ -6,7 +6,6 @@ function About() {
   return (
     <>
     <AboutBody/>
-    <Services/>
     </>
   )
 }
