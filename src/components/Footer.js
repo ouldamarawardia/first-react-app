@@ -6,13 +6,13 @@ function Footer() {
             <div className="section-content">
                 <p className="copyright-text">@ 2024 Pinku coding</p>
                 <div className="social-link-list">
-                    <a href="#" className="social-link">
+                    <a href="www.facebook.com" className="social-link">
                         <i className="fa-brands fa-facebook"></i>
                     </a>
-                    <a href="#" className="social-link">
+                    <a href="www.instagram.com" className="social-link">
                         <i className="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="#" className="social-link">
+                    <a href="www.linkedin.com" className="social-link">
                         <i className="fa-brands fa-linkedin"></i>
                     </a>  
                 </div>

@@ -1,12 +1,12 @@
 import React from 'react'
-
+import about from '../../assets/images/aboutUs.png';
 export default function AboutBody() {
   return (
     <>
       <section className="about-section" id="about">
             <div className="section-content">
                 <div className="about-image-wrapper">
-                    <img src="images/aboutUs.png" alt="About" className="about-image"/>
+                    <img src={about} alt="About" className="about-image"/>
                 </div>
                 <div className="about-details">
                     <h2 className="section-title">About Us</h2>
@@ -14,13 +14,13 @@ export default function AboutBody() {
                         porro assumenda hic cum itaque animi tempore et, deserunt fugit in repudiandae maxime possimus
                         quibusdam fuga optio impedit.</p>
                     <div className="social-link-list">
-                        <a href="#" className="social-link">
+                        <a href="www.facebook.com" className="social-link">
                             <i className="fa-brands fa-facebook"></i>
                         </a>
-                        <a href="#" className="social-link">
+                        <a href="www.intagram.com" className="social-link">
                             <i className="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="#" className="social-link">
+                        <a href="www.linkedin.com" className="social-link">
                             <i className="fa-brands fa-linkedin"></i>
                         </a>
                     </div>

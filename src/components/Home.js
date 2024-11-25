@@ -1,6 +1,6 @@
 
 import React from 'react'
-
+import mainImage from '../assets/images/main.png';
 function Home() {
   return (
     <section className="hero-section">
@@ -17,7 +17,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="hero-image-wrapper">
-                    <img src="src/images/main.png" alt="hero"/>
+                    <img src={mainImage} alt="hero"/>
                 </div>
             </div>
         </section>

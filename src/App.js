@@ -1,6 +1,6 @@
 
 import './App.css';
-import React, {useState} from 'react';
+import React from 'react';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Header from './components/Header';

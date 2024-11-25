@@ -1,6 +1,40 @@
-import React from 'react'
-
+import React,{useState} from 'react'
+import person from '../../assets/images/team.jpg';
 export default function TeamBody() {
+    const [team] = useState([
+        {
+            id: 1,
+            name: "Ahmed bouchakour ",
+            presentation : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae"
+        },
+        {
+            id: 2,
+            name: "Issam okbani",
+            presentation : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae"
+        },
+        {
+            id: 3,
+            name: "Hichem okbani",
+            presentation : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae"
+        },
+        {
+            id: 4,
+            name: "Ali mahedjoub",
+            presentation : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae"
+        },
+        {
+            id: 5,
+            name: "Sarah elmadani",
+            presentation : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae"
+        },
+        {
+            id: 6,
+            name: "Aissani Meriem",
+            presentation : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae"
+        },
+        
+    ])
+
   return (
     <>
       <section className="team-section" id="ourteam">
@@ -9,31 +43,15 @@ export default function TeamBody() {
             <div className="slider-container swiper">
                 <div className="slider-wrapper">
                     <ul className="oneteam-list swiper-wrapper">
-                        <li className="oneteam swiper-slide">
-                            <img src="images/team1.jpg" alt="Our Team" className="oneteam-image"/>
-                            <h3 className="name">Ahmed bouchakour</h3>
-                            <i className="presentation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae</i>
+                        {team.map(team=>(
+                            <li className="oneteam swiper-slide" key={team.id}>
+                            <img src={person} alt="Our Team" className="oneteam-image"/>
+                            <h3 className="name">{team.name}</h3>
+                            <i className="presentation">{team.presentation}</i>
                         </li>
-                        <li className="oneteam swiper-slide">
-                            <img src="images/team2.jpg" alt="Our Team" className="oneteam-image"/>
-                            <h3 className="name">Issam okbani</h3>
-                            <i className="presentation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae</i>
-                        </li>
-                        <li className="oneteam swiper-slide">
-                            <img src="images/team3.jpg" alt="Our Team" className="oneteam-image"/>
-                            <h3 className="name">Hichem okbani</h3>
-                            <i className="presentation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae</i>
-                        </li>
-                        <li className="oneteam swiper-slide">
-                            <img src="images/team4.jpg" alt="Our Team" className="oneteam-image"/>
-                            <h3 className="name">Ali mahedjoub</h3>
-                            <i className="presentation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae</i>
-                        </li>
-                        <li className="oneteam swiper-slide">
-                            <img src="images/team5.jpg" alt="Our Team" className="oneteam-image"/>
-                            <h3 className="name">Sarah elmadani</h3>
-                            <i className="presentation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae </i>
-                        </li>
+
+                        ))}
+
                     </ul>
 
                     {/* <!-- If we need pagination --> */}
