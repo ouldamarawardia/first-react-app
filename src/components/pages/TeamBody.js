@@ -1,72 +1,82 @@
-import React,{useState} from 'react'
-import person from '../../assets/images/team.jpg';
+import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import person from '../../assets/images/team.jpg'; // Update with the correct path
+
 export default function TeamBody() {
-    const [team] = useState([
-        {
-            id: 1,
-            name: "Ahmed bouchakour ",
-            presentation : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae"
-        },
-        {
-            id: 2,
-            name: "Issam okbani",
-            presentation : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae"
-        },
-        {
-            id: 3,
-            name: "Hichem okbani",
-            presentation : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae"
-        },
-        {
-            id: 4,
-            name: "Ali mahedjoub",
-            presentation : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae"
-        },
-        {
-            id: 5,
-            name: "Sarah elmadani",
-            presentation : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae"
-        },
-        {
-            id: 6,
-            name: "Aissani Meriem",
-            presentation : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae"
-        },
-        
-    ])
+  const [team] = useState([
+    { id: 1, name: "Ahmed Bouchakour", presentation: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae" },
+    { id: 2, name: "Issam Okbani", presentation: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae" },
+    { id: 3, name: "Hichem Okbani", presentation: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae" },
+    { id: 4, name: "Ali Mahedjoub", presentation: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae" },
+    { id: 5, name: "Sarah Elmadani", presentation: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae" },
+    { id: 6, name: "Aissani Meriem", presentation: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae" },
+  ]);
+  
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  const handleSlideChange = (swiper) => {
+    setActiveSlide(swiper.activeIndex);  // Update the active slide index
+  };
 
   return (
-    <>
-      <section className="team-section" id="ourteam">
-        <h2 className="section-title">Our Team</h2>
-        <div className="section-content">
-            <div className="slider-container swiper">
-                <div className="slider-wrapper">
-                    <ul className="oneteam-list swiper-wrapper">
-                        {team.map(team=>(
-                            <li className="oneteam swiper-slide" key={team.id}>
-                            <img src={person} alt="Our Team" className="oneteam-image"/>
-                            <h3 className="name">{team.name}</h3>
-                            <i className="presentation">{team.presentation}</i>
-                        </li>
-
-                        ))}
-
-                    </ul>
-
-                    {/* <!-- If we need pagination --> */}
-                    <div className="swiper-slide-button swiper-pagination"></div>
-
-                    {/* <!-- If we need navigation buttons --> */}
-                    <div className="swiper-slide-button swiper-button-prev"></div>
-                    <div className="swiper-slide-button swiper-button-next"></div>
-
-                    
+    <section className="team-section" id="ourteam">
+      <h2 className="section-title">Our Team</h2>
+      <div className="section-content">
+        <Swiper
+          
+          modules={[Navigation, Pagination]}
+          loop={true}
+          spaceBetween={30}
+          pagination={{
+            el: '.swiper-pagination',
+            clickable: true,
+          }}
+          navigation={{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            clickable: true,
+          }}
+          onSlideChange={handleSlideChange}
+          className="swiper-container"
+          breakpoints={{
+            640: {
+              slidesPerView: 1, // Passer à 1 slide visible quand la largeur est <= 640px
+            },
+            900: {
+                slidesPerView: 2, // Passer à 1 slide visible quand la largeur est <= 640px
+              },
+            1024:{   
+                slidesPerView: 3, // Passer à 1 slide visible quand la largeur est <= 640px
+              },
+          }}
+        >
+          {team.map((member) => (
+            <SwiperSlide key={member.id}>
+              <div className="team-card">
+                <div className="card-inner">
+                  <div className="card-front">
+                    <img src={person} alt={member.name} className="team-image" />
+                    <h3 className="name">{member.name}</h3>
+                  </div>
+                  <div className="card-back">
+                    <p className="presentation">{member.presentation}</p>
+                  </div>
                 </div>
-            </div>
-        </div>
-        
+              </div>
+            </SwiperSlide>
+          ))}
+          <div className="swiper-pagination"></div>
+          <div className="slider-controler">
+            <div className="swiper-button-prev slider-arrow"></div>
+            <div className="swiper-button-next slider-arrow"></div>
+          </div>
+        </Swiper>
+      </div>
     </section>
-    </>
-  )
+  );
 }
