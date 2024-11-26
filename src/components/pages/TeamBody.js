@@ -17,7 +17,7 @@ export default function TeamBody() {
     { id: 6, name: "Aissani Meriem", presentation: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque recusandae" },
   ]);
   
-  const [activeSlide, setActiveSlide] = useState(0);
+  const [setActiveSlide] = useState(0);
 
   const handleSlideChange = (swiper) => {
     setActiveSlide(swiper.activeIndex);  // Update the active slide index

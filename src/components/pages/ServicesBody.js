@@ -43,7 +43,7 @@ export default function ServicesBody() {
                     {services.map(services=>(
                         <li className="services-item" key={services.id}>
                         <img src={item} alt="Services Item" className="services-image"/>
-                        <h3 className="name">{services.name +services.id}</h3>/
+                        <h3 className="name">{services.name +services.id}</h3>
                         <p className="text">{services.text}</p>
                     </li>
                     ))}
