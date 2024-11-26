@@ -18,7 +18,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="hero-image-wrapper">
-                    <img src={mainImage} alt="hero"/>
+                    <img src={mainImage} className='hero-image' alt="hero"/>
                 </div>
             </div>
         </section>
