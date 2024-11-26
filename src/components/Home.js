@@ -1,5 +1,6 @@
 
 import React from 'react'
+import { Link } from 'react-router-dom';
 import mainImage from '../assets/images/main.png';
 
 function Home() {
@@ -13,8 +14,8 @@ function Home() {
                         elit. Alias sequi aut recusandae, eos laboriosam amet corrupti illum et accusamus itaque,
                         consequuntur quidem accusantium quos minus autem veritatis aliquid rerum nesciunt.</p>
                     <div className="buttons">
-                        <a href="/services" className="button order-now">Order Now</a>
-                        <a href="/contact" className="button contact-us">Contact Us</a>
+                    <Link className="button order-now" to="/services" >Our services</Link>
+                    <Link className="button contact-us" to="/contact" >Contact Us</Link>
                     </div>
                 </div>
                 <div className="hero-image-wrapper">
